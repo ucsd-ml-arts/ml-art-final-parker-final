@@ -42,7 +42,11 @@ Any implementation details or notes we need to repeat your work.
 
 ## Reference
 
-References to any papers, techniques, repositories you used:
-- Papers
-- Repositories
-- Blog posts
+- Real Faces dataset: https://github.com/NVlabs/ffhq-dataset  
+  Note that StyleGAN was trained on this.
+- Fake Faces dataset: https://thispersondoesnotexist.com  
+  Note that these were generated using StyleGAN
+- Unpaired Image Translation: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+
+
+Interesting idea: if I were to use a StyleGAN encoder on my real faces dataset, then I could conceivably construct a *paired* dataset... I know that if the purpose is to translate to the output of the encoder-decoder, then training a paired image traslation would be redundant, but what if I throw something new (not a face) into that paired model?  Just a thought.
