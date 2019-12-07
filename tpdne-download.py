@@ -15,8 +15,16 @@ http = urllib3.PoolManager()
 
 hashes = set()
 
+start_time = time.monotonic()
+print_every = 100
+
 i = 0
 while i < num_download:
+
+    if i % print_every == 0:
+        print(f"{i} images downloaded.")
+        elapsed = time.monotonic() - start_time
+        print(f"Elapsed time: {int(elapsed//60)}m{int(elapsed%60)}s")
 
     r = http.request("GET", url, preload_content=False)
 
