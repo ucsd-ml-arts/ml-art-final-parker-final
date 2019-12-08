@@ -11,7 +11,7 @@ pip install -r requirements.txt
 # Start training the model (assumes 2 GPUs)
 python train.py --dataroot $DATADIR \
                 --name face2fake \
-                --gpu-ids 0,1 \
+                --gpu_ids 0,1 \
                 --checkpoints_dir $CHECKDIR \
                 --model cycle_gan \
                 --batch_size 8 \
