@@ -13,9 +13,9 @@ python train.py --dataroot $DATADIR \
                 --name face2fake \
                 --checkpoints_dir $CHECKDIR \
                 --model cycle_gan \
-                --gpu_ids $1 \
-                --batch_size $2 \
-                --load_size $3 \
-                --crop_size $4 \
-                --preprocess $5 \
-                $6 $7 $8 $9
+#                 --gpu_ids $1 \
+#                 --batch_size $2 \
+#                 --load_size $3 \
+#                 --crop_size $4 \
+#                 --preprocess $5 \
+                $1
