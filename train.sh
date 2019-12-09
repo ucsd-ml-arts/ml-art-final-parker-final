@@ -18,9 +18,7 @@ python train.py --dataroot $DATADIR \
                 --batch_size $BATCHSIZE \
                 --load_size $LOADSIZE \
                 --crop_size $CROPSIZE \
-                --preprocess $PREPROCESS \
-                $CONTINUE \
-                --epoch_count $EPOCHCOUNT
+                --preprocess $PREPROCESS
 #                 --gpu_ids $1 \
 #                 --batch_size $2 \
 #                 --load_size $3 \
