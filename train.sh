@@ -11,10 +11,11 @@ pip install -r requirements.txt
 # Start training the model
 python train.py --dataroot $DATADIR \
                 --name face2fake \
-                --gpu_ids $1 \
                 --checkpoints_dir $CHECKDIR \
                 --model cycle_gan \
+                --gpu_ids $1 \
                 --batch_size $2 \
-                --load_size 1024 \
-                --crop_size 1024 \
-                --preprocess none
+                --load_size $3 \
+                --crop_size $4 \
+                --preprocess $5 \
+                $6 $7 $8 $9
