@@ -13,7 +13,7 @@ python train.py --dataroot $DATADIR \
                 --name face2fake \
                 --checkpoints_dir $CHECKDIR \
                 --model cycle_gan \
-                --display_id 0
+                --display_id 0 \
                 --gpu_ids $GPUIDS \
                 --batch_size $BATCHSIZE \
                 --load_size $LOADSIZE \
