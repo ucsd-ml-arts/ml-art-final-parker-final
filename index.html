@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>These people do exist...</title>
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,400,600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            --text-color: #333;
+
+            font-family: "IBM Plex Sans", sans-serif;
+            color: var(--text-color);
+
+            background-color: #232f3c;
+            background-color: #f8f8f8;
+
+            margin-top: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .hero {
+            height: 100vh;
+            text-align: center;
+        }
+
+        .hero .video-container {
+            position: relative;
+            height: 100vmin;
+            width: 100vmin;
+            margin: auto;
+            background-color: black;
+        }
+
+        .hero video {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+
+        .hero .title {
+            /* --title-color: rgba(5, 0, 0, 0.9); */
+            --title-color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 0;
+            left: 0.1em;
+            padding-right: 20%;
+            text-align: left;
+            font-size: 20vmin;
+            color: rgba(1, 1, 1, 0);
+            font-weight: bold;
+            text-shadow: 0px 0px 10px var(--title-color);
+            transition: text-shadow 0.1s;
+            animation-name: blurry;
+            animation-duration: 11s;
+            animation-iteration-count: infinite;
+            pointer-events: none;
+        }
+
+        @keyframes blurry {
+            0% {
+                text-shadow: 0px 0px 10px var(--title-color);
+            }
+
+            10% {
+                text-shadow: 0px 0px 20px var(--title-color);
+            }
+
+            30% {
+                text-shadow: 0px 0px 6px var(--title-color);
+            }
+
+            70% {
+                text-shadow: 0px 0px 11px var(--title-color);
+            }
+
+            100% {
+                text-shadow: 0px 0px 10px var(--title-color);
+            }
+        }
+
+        .page {
+            padding: 0.5em;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+
+        }
+
+        .row img {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+
+            transition: transform 0.3s;
+        }
+
+        .row video {
+            width: 100%;
+            margin: 0;
+            height: 100%;
+        }
+
+        .row img.active {
+            position: absolute;
+            top: calc((100vh - 100vmin) / 2);
+            left: calc((100vw - 100vmin) / 2);
+            height: 100vmin;
+            width: 100vmin;
+        }
+
+        .row p {
+            font-weight: normal;
+            margin: 1em;
+            height: 3em;
+            border-bottom: 4px solid var(--text-color);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal .content {
+            text-align: center;
+            margin: auto;
+        }
+
+        .modal video,
+        .modal img {
+            height: 100vmin;
+            width: 100vmin;
+        }
+
+        .divider {
+            height: 8em;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+            padding: 8em 0;
+        }
+
+        .footer a {
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #aaa;
+            opacity: 1;
+        }
+
+        .footer a:hover {
+            opacity: 0.5;
+        }
+
+        code {
+            font-family: Consolas, Menlo, monospace;
+            font-size: 0.95em;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="fullpage">
+        <div class="hero section">
+            <div class="video-container">
+                <video autoplay loop src="images/generated_images/loop/loop.mp4"></video>
+                <div class="title">
+                    When faced with humanity
+                </div>
+            </div>
+        </div>
+        <div class="page section">
+
+            <h1>In an effort to create a human</h1>
+
+            <h3>Real Faces</h3>
+
+            <div class="row">
+                <img src="images/aligned_images/obama_01.png" alt="">
+                <img src="images/aligned_images/clinton_01.png" alt="">
+                <img src="images/aligned_images/ivanka_01.png" alt="">
+                <img src="images/aligned_images/cage_01.png" alt="">
+                <img src="images/aligned_images/serena_01.png" alt="">
+                <img src="images/aligned_images/jackie_01.png" alt="">
+                <img src="images/aligned_images/twomey_01.png" alt="">
+                <img src="images/aligned_images/parker_01.png" alt="">
+            </div>
+
+            <div class="row">
+                <p>Barack Obama</p>
+                <p>Bill Clinton</p>
+                <p>Ivanka Trump</p>
+                <p>Nicolas Cage</p>
+                <p>Serena Williams</p>
+                <p>Jackie Chan</p>
+                <p>Robert Twomey</p>
+                <p>Parker Addison</p>
+            </div>
+
+            <h3>With that, they are born.</h3>
+
+            <div class="row">
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/obama.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/clinton.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/ivanka.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/cage.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/serena.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/jackie.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/twomey.mp4">
+                </div>
+                <div class="vid-container">
+                    <video loop src="images/generated_images/from_baseline/parker.mp4">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>100 iterations</h3>
+
+            <div class="row">
+                <img src="images/generated_images/100ep/obama_01.png" alt="">
+                <img src="images/generated_images/100ep/clinton_01.png" alt="">
+                <img src="images/generated_images/100ep/ivanka_01.png" alt="">
+                <img src="images/generated_images/100ep/cage_01.png" alt="">
+                <img src="images/generated_images/100ep/serena_01.png" alt="">
+                <img src="images/generated_images/100ep/jackie_01.png" alt="">
+                <img src="images/generated_images/100ep/twomey_01.png" alt="">
+                <img src="images/generated_images/100ep/parker_01.png" alt="">
+            </div>
+
+            <h3>500 iterations</h3>
+
+            <div class="row">
+                <img src="images/generated_images/500ep/obama_01.png" alt="">
+                <img src="images/generated_images/500ep/clinton_01.png" alt="">
+                <img src="images/generated_images/500ep/ivanka_01.png" alt="">
+                <img src="images/generated_images/500ep/cage_01.png" alt="">
+                <img src="images/generated_images/500ep/serena_01.png" alt="">
+                <img src="images/generated_images/500ep/jackie_01.png" alt="">
+                <img src="images/generated_images/500ep/twomey_01.png" alt="">
+                <img src="images/generated_images/500ep/parker_01.png" alt="">
+            </div>
+
+            <h3>1000 iterations</h3>
+
+            <div class="row">
+                <img src="images/generated_images/1000ep/obama_01.png" alt="">
+                <img src="images/generated_images/1000ep/clinton_01.png" alt="">
+                <img src="images/generated_images/1000ep/ivanka_01.png" alt="">
+                <img src="images/generated_images/1000ep/cage_01.png" alt="">
+                <img src="images/generated_images/1000ep/serena_01.png" alt="">
+                <img src="images/generated_images/1000ep/jackie_01.png" alt="">
+                <img src="images/generated_images/1000ep/twomey_01.png" alt="">
+                <img src="images/generated_images/1000ep/parker_01.png" alt="">
+            </div>
+
+            <h3>1500 iterations</h3>
+
+            <div class="row">
+                <img src="images/generated_images/1500ep/obama_01.png" alt="">
+                <img src="images/generated_images/1500ep/clinton_01.png" alt="">
+                <img src="images/generated_images/1500ep/ivanka_01.png" alt="">
+                <img src="images/generated_images/1500ep/cage_01.png" alt="">
+                <img src="images/generated_images/1500ep/serena_01.png" alt="">
+                <img src="images/generated_images/1500ep/jackie_01.png" alt="">
+                <img src="images/generated_images/1500ep/twomey_01.png" alt="">
+                <img src="images/generated_images/1500ep/parker_01.png" alt="">
+            </div>
+
+            <div class="divider"></div>
+
+
+
+        </div>
+
+        <div class="footer">
+            &copy; 2019 <a href="https://parkeraddison.com">Parker Grey Addison</a>
+            |
+            <a href="https://github.com/ucsd-ml-arts/ml-art-final-parker-final"><code>&lt;/&gt;</code> on
+                GitHub</a>
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="modal">
+        <div class="content"></div>
+    </div>
+
+</body>
+
+<script>
+
+    let videos = document.querySelectorAll(".row video");
+    let images = document.querySelectorAll(".row img");
+
+    let modal = document.getElementById("modal");
+    let modalContent = document.querySelector(".modal .content");
+
+    window.onload = function () {
+        videos.forEach(function (elem) { elem.play() });
+
+        setInterval(function () {
+            videos.forEach(function (elem) { elem.currentTime = 0; });
+        }, 6000);
+    }
+
+    function modalify(elem) {
+        elem.addEventListener("click", function() {
+            modal.style.display = "block";
+            modalContent.innerHTML = '';
+            copy = elem.cloneNode();
+            modalContent.insertAdjacentElement("beforeend", copy);
+            if (elem.nodeName == "VIDEO") {
+                copy.play();
+            }
+        })
+    }
+
+    modalify(document.querySelector(".hero video"));
+
+    videos.forEach(modalify);
+
+    images.forEach(modalify);
+
+    modal.addEventListener("click", function() {
+        modal.style.display = "none";
+    })
+
+
+    // let imgs = document.querySelectorAll(".row img");
+
+    // function removeAllActive() {
+
+    //     imgs.forEach(function (e) {
+    //         e.classList.remove("active");
+    //     });
+    // }
+
+    // imgs.forEach(function (elem) {
+
+    //     elem.addEventListener("click", function () {
+
+    //         isActive = this.classList.contains("active");
+
+    //         removeAllActive();
+
+    //         if (!isActive) {
+    //             this.classList.add("active");
+    //         }
+
+    //     });
+    // });
+
+
+</script>
+
+</html>
