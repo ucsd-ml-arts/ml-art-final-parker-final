@@ -26,7 +26,7 @@ In addition to images of each individual subject as they are independently recon
 
 ## Project Report
 
-Upload your project report (4 pages) as a pdf with your repository, following this template: [google docs](https://drive.google.com/open?id=1mgIxwX1VseLyeM9uPSv5GJQgRWNFqtBZ0GKE9d4Qxww).
+See `ECE188 Final.pdf`
 
 ## Model/Data
 
@@ -63,10 +63,12 @@ I had to slightly modify `encode_images.py` and `encoder/perceptual_model.py` in
 - optionally generate an image after every 10 epochs, instead of only at the end of all epochs
 - optionally begin the optimization search at a given latent representation as opposed to the null vector
 
-These modified scripts have been included, and add the following arguments when calling `python encode_images.py`:
+These modified scripts have been included.  I had the intention of adding the following arguments when calling `python encode_images.py`:
 - `--generate-every <int>` (default `None`) Generates the reconstructed image after every N epochs in addition to at the end of all epochs.
-- `--dependent-start` **TODO**
-- `--start-at <path-to-.npy>` **TODO**
+- `--dependent-start` If present, does not reset the latent-vector between target reconstructions.
+- `--start-at <path-to-.npy>` The path to the latent representation to start the first target reconstruction at.
+
+However, I had issues with some of these arguments, so currently none of the arguments exist—instead they are just hardcoded into the scripts!  Since I would like to come back to this project later, I may end up polishing these up.
 
 Also provided is a script `video.sh` which converts the above generated frames into an mp4 clip.
 
@@ -74,9 +76,11 @@ Also provided is a script `video.sh` which converts the above generated frames i
 
 See [`index.html`]()
 
-See `<person-name>.mp4` for StyleGAN reconstruction of a subject, starting from the null latent vector.
+See `images/generated_images/*ep/<person-name>.mp4` for StyleGAN reconstruction of a subject, starting from the null latent vector.
 
-See `loop.mp4` for a loop-able clip of StyleGAN reconstruction of a subject, starting from the learned latent vector of the previous subject.  Note that these reconstructions struggled to achieve the same loss minimization as the reconstructions which started at the null latent vector, however the same number of reconstruction iterations is used.
+See `images/generated_images/loop/loop.mp4` for a loop-able clip of StyleGAN reconstruction of a subject, starting from the learned latent vector of the previous subject.  Note that these reconstructions struggled to achieve the same loss minimization as the reconstructions which started at the null latent vector, however the same number of reconstruction iterations is used.
+
+See `images/generated_images/loop/<person-name>.mp4` to see the individual subject reconstructions from the loopable clip.
 
 All of the above mentioned video clips have a frame for every 10 iterations of the StyleGAN-Encoder [[8]], up to 1440 iterations per subject.
 
@@ -87,8 +91,6 @@ See `conda_requirements.txt` for Python packages that are required.
 Note that the command-line tool `ffmpeg` is required to convert the images to videos.
 
 ## Reference
-
-
 
 1. Tero Karras, Samuli Laine, Timo Aila, and Nvidia. *A Style-Based Generator Architecture for Generative Adversarial Networks*. December 2018. https://github.com/NVlabs/stylegan
 
@@ -114,7 +116,7 @@ Note that the command-line tool `ffmpeg` is required to convert the images to vi
 
 [6]: https://junyanz.github.io/CycleGAN/
 
-7. **TODO** Nvidia Flickr Faces High Quality dataset. https://github.com/NVlabs/ffhq-dataset
+7. Tero Karras, Samuli Laine, Timo Aila, and Nvidia. Flickr Faces High Quality dataset.  February 2019. https://github.com/NVlabs/ffhq-dataset
 
 [7]: https://github.com/NVlabs/ffhq-dataset
 
@@ -122,6 +124,6 @@ Note that the command-line tool `ffmpeg` is required to convert the images to vi
 
 [8]: https://github.com/cysmith/neural-style-tf
 
-9. **TODO** Stylegan-Encoder. https://github.com/Puzer/stylegan-encoder
+9. Dmitry Nikitko. StyleGAN-Encoder. February 2019. https://github.com/Puzer/stylegan-encoder
 
 [9]: https://github.com/Puzer/stylegan-encoder

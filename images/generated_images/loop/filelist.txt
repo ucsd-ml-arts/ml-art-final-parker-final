@@ -1,0 +1,8 @@
+file './1obama.mp4'
+file './2clinton.mp4'
+file './3ivanka.mp4'
+file './4cage.mp4'
+file './5serena.mp4'
+file './6jackie.mp4'
+file './7parker.mp4'
+file './8twomey.mp4'
